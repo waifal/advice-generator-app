@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --blue: hsl(193, 38%, 86%);
+    --green: hsl(150, 100%, 66%);
+    --blue-600: hsl(217, 19%, 38%);
+    --blue-900: hsl(217, 19%, 24%);
+    --blue-950: hsl(218, 23%, 16%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 1rem/1.5 Manrope;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue-950);
+    padding: 1rem;
+}
+
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.card__container {
+    padding: 3rem 2rem;
+    width: 550px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-weight: 800;
+    border-radius: 1rem;
+    background-color: var(--blue-900);
+    box-shadow: 0 6px 16px rgb(0 0 0 / 11%);
+    position: relative;
+}
+
+.advice-number {
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 4px;
+    color: var(--green);
+}
+
+.advice-text {
+    margin: 2rem 0 3rem;
+    color: var(--blue);
+    font-size: 28px;
+    word-spacing: 2px;
+}
+
+.card__divider {
+    margin-bottom: 1rem;
+}
+
+.generate-advice-btn {
+    --btn-size: 65px;
+    height: var(--btn-size);
+    width: var(--btn-size);
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    bottom: -32.5px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    border: none;
+    background-color: var(--green);
+    transition: box-shadow 0.15s linear;
+}
+
+.generate-advice-btn:hover {
+    box-shadow: 0 0 15px var(--green);
+}
+
+/* Attribution */
+.attribution {
+    height: 50px;
+    align-content: center;
+    color: #eee;
+    width: 100%;
+    font-size: 11px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    background-color: var(--blue-950);
+}
+
+.attribution a {
+    color: var(--green);
+}
+
+@media (max-width: 600px) {
+    .card__container {
+        padding: 2rem 1.5rem;
+        width: 90%;
+    }
+
+    .advice-text {
+        font-size: 20px;
+        margin: 1.5rem 0 2rem;
+    }
+
+    .generate-advice-btn {
+        --btn-size: 55px;
+        height: var(--btn-size);
+        width: var(--btn-size);
+        bottom: -27.5px;
+    }
+}
+
+@media (max-width: 400px) {
+    .card__container {
+        padding: 1.5rem 1rem;
+    }
+
+    .advice-text {
+        font-size: 18px;
+    }
+
+    .advice-number {
+        font-size: 0.75rem;
+        letter-spacing: 3px;
+    }
+
+    .generate-advice-btn {
+        --btn-size: 50px;
+        height: var(--btn-size);
+        width: var(--btn-size);
+        bottom: -25px;
+    }
+}
