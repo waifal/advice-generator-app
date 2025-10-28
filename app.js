@@ -34,7 +34,6 @@ async function handleAdvice() {
 
     try {
         const data = await fetchAdvice();
-        console.log(data);
 
         adviceNumberId.textContent = '#' + data.slip.id;
         adviceText.innerHTML       = '&#8220;' + data.slip.advice + '&#8221;';
